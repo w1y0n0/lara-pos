@@ -110,3 +110,120 @@ $ php artisan migrate
   2025_12_24_062034_create_setting_table ............................................................................................... 8.55ms DONE
 
 ---
+
+===
+Helper
+===
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan tinker
+Psy Shell v0.12.18 (PHP 8.2.28 — cli) by Justin Hileman
+New PHP manual is available (latest: 3.0.1). Update with `doc --update-manual`
+> 1000000
+= 1000000
+
+> number_format(1000000)
+= "1,000,000"
+
+---
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ composer dump-autoload
+Generating optimized autoload files
+> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> @php artisan package:discover --ansi
+
+   INFO  Discovering packages.
+
+  laravel/pail ................................................................................................................................ DONE
+  laravel/sail ................................................................................................................................ DONE
+  laravel/tinker .............................................................................................................................. DONE
+  nesbot/carbon ............................................................................................................................... DONE
+  nunomaduro/collision ........................................................................................................................ DONE
+  nunomaduro/termwind ......................................................................................................................... DONE
+
+Generated optimized autoload files containing 6259 classes
+
+---
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan tinker
+Psy Shell v0.12.18 (PHP 8.2.28 — cli) by Justin Hileman
+New PHP manual is available (latest: 3.0.1). Update with `doc --update-manual`
+> format_uang(100000000)
+= "100.000.000"
+
+> format_uang(5000000)
+= "5.000.000"
+
+> format_uang(750000)
+= "750.000"
+
+> exit
+
+   INFO  Goodbye.
+
+---
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan tinker
+Psy Shell v0.12.18 (PHP 8.2.28 — cli) by Justin Hileman
+New PHP manual is available (latest: 3.0.1). Update with `doc --update-manual`
+> terbilang(1000000)
+= " satu juta "
+
+> terbilang(10)
+= " sepuluh"
+
+> terbilang(123)
+
+   DEPRECATED  Implicit conversion from float 2.3 to int loses precision in app\Http\Helpers\helpers.php on line 15.
+
+= " seratus dua puluh tiga"
+
+> terbilang(2345)
+
+   DEPRECATED  Implicit conversion from float 2.345 to int loses precision in app\Http\Helpers\helpers.php on line 15.
+
+
+   DEPRECATED  Implicit conversion from float 3.45 to int loses precision in app\Http\Helpers\helpers.php on line 15.
+
+
+   DEPRECATED  Implicit conversion from float 4.5 to int loses precision in app\Http\Helpers\helpers.php on line 15.
+
+= " dua ribu tiga ratus empat puluh lima"
+
+> terbilang(15)
+= " lima belas"
+
+> terbilang(150)
+= " seratus lima puluh "
+
+> exit
+
+   INFO  Goodbye.
+
+---
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan tinker
+Psy Shell v0.12.18 (PHP 8.2.28 — cli) by Justin Hileman
+New PHP manual is available (latest: 3.0.1). Update with `doc --update-manual`
+> date('Y-m-d');
+= "2025-12-24"
+
+> date('Y-F-d');
+= "2025-December-24"
+
+> date('d/M/Y');
+= "24/Dec/2025"
+
+> exit
+
+   INFO  Goodbye.
+
+---
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan tinker
+Psy Shell v0.12.18 (PHP 8.2.28 — cli) by Justin Hileman
+New PHP manual is available (latest: 3.0.1). Update with `doc --update-manual`
+> tanggal_indonesia('2025-12-24')
+= "Rabu, 24 Desember 2025"
+
+---
