@@ -1,0 +1,112 @@
+===
+Database Migration
+===
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php -v
+PHP 8.2.28 (cli) (built: Mar 11 2025 18:37:30) (ZTS Visual C++ 2019 x64)
+Copyright (c) The PHP Group
+Zend Engine v4.2.28, Copyright (c) Zend Technologies
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan -v
+Laravel Framework 12.43.1
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:migration add_columns_to_users_table
+
+   INFO  Migration [C:\laragon\www\lara-pos\database\migrations\2025_12_24_042813_add_columns_to_users_table.php] created successfully.
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan migrate
+
+   INFO  Running migrations.
+
+  2025_12_24_040839_tambah_kolom_baru_to_users_table .................................................................................. 67.12ms DONE
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan migrate:rollback --step=1
+
+   INFO  Rolling back migrations.
+
+  2025_12_24_040839_tambah_kolom_baru_to_users_table .................................................................................. 18.04ms DONE
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan migrate
+
+   INFO  Running migrations.
+
+  2025_12_24_042813_add_columns_to_users_table ........................................................................................ 38.28ms DONE
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:migration create_kategori_table
+
+   INFO  Migration [C:\laragon\www\lara-pos\database\migrations\2025_12_24_043106_create_kategori_table.php] created successfully.
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:migration create_produk_table
+
+   INFO  Migration [C:\laragon\www\lara-pos\database\migrations\2025_12_24_055528_create_produk_table.php] created successfully.
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:migration create_member_table
+
+   INFO  Migration [C:\laragon\www\lara-pos\database\migrations\2025_12_24_060117_create_member_table.php] created successfully.
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:migration create_supplier_table
+
+   INFO  Migration [C:\laragon\www\lara-pos\database\migrations\2025_12_24_061616_create_supplier_table.php] created successfully.
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:migration create_pembelian_table
+
+   INFO  Migration [C:\laragon\www\lara-pos\database\migrations\2025_12_24_061903_create_pembelian_table.php] created successfully.
+
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:migration create_pembelian_detail_table
+
+   INFO  Migration [C:\laragon\www\lara-pos\database\migrations\2025_12_24_061926_create_pembelian_detail_table.php] created successfully.
+
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:migration create_penjualan_table
+
+   INFO  Migration [C:\laragon\www\lara-pos\database\migrations\2025_12_24_061946_create_penjualan_table.php] created successfully.
+
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:migration create_penjualan_detail_table
+
+   INFO  Migration [C:\laragon\www\lara-pos\database\migrations\2025_12_24_062002_create_penjualan_detail_table.php] created successfully.
+
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:migration create_pengeluaran_table
+
+   INFO  Migration [C:\laragon\www\lara-pos\database\migrations\2025_12_24_062021_create_pengeluaran_table.php] created successfully.
+
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:migration create_setting_table
+
+   INFO  Migration [C:\laragon\www\lara-pos\database\migrations\2025_12_24_062034_create_setting_table.php] created successfully.
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan migrate
+
+   INFO  Running migrations.
+
+  2025_12_24_043106_create_kategori_table ............................................................................................. 60.52ms DONE
+  2025_12_24_055528_create_produk_table ............................................................................................... 52.48ms DONE
+  2025_12_24_060117_create_member_table ............................................................................................... 27.06ms DONE
+  2025_12_24_061616_create_supplier_table ............................................................................................. 11.68ms DONE
+  2025_12_24_061903_create_pembelian_table ............................................................................................ 12.80ms DONE
+  2025_12_24_061926_create_pembelian_detail_table ...................................................................................... 9.52ms DONE
+  2025_12_24_061946_create_penjualan_table ............................................................................................. 9.82ms DONE
+  2025_12_24_062002_create_penjualan_detail_table ...................................................................................... 9.77ms DONE
+  2025_12_24_062021_create_pengeluaran_table ........................................................................................... 9.44ms DONE
+  2025_12_24_062034_create_setting_table ............................................................................................... 8.55ms DONE
+
+---
