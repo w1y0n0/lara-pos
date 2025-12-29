@@ -370,4 +370,61 @@ $ php artisan route:list
   GET|HEAD        storage/{path} ......................................................................... storage.local      
   GET|HEAD        up ...................................................................................................      
 
- 
+ ---
+
+ ===
+ CRUD Produk 
+ ===
+ LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:migration add_foreign_key_to_produk_table
+
+   INFO  Migration [C:\laragon\www\lara-pos\database\migrations\2025_12_27_052736_add_foreign_key_to_produk_table.php] 
+created successfully.
+
+LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan migrate
+
+   INFO  Running migrations.
+
+  2025_12_27_052736_add_foreign_key_to_produk_table ................................................... 368.39ms DONE  
+
+---
+jika migrate gagal/error
+---
+LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
+$ composer require doctrine/dbal
+
+---
+LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:model Produk -r
+
+   INFO  Model [C:\laragon\www\lara-pos\app\Models\Produk.php] created successfully.
+
+   INFO  Controller [C:\laragon\www\lara-pos\app\Http\Controllers\ProdukController.php] created successfully.
+
+LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan tinker
+Psy Shell v0.12.18 (PHP 8.2.7 — cli) by Justin Hileman
+New PHP manual is available (latest: 3.0.1). Update with `doc --update-manual`
+> tambah_nol_didepan(1, 5);
+= "00001"
+
+> exit
+
+   INFO  Goodbye.
+
+LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan migrate:rollback --step=1
+
+   INFO  Rolling back migrations.
+
+  2025_12_27_052736_add_foreign_key_to_produk_table ............................... 142.14ms DONE
+
+LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan migrate
+
+   INFO  Running migrations.
+
+  2025_12_27_052736_add_foreign_key_to_produk_table .............................................. 224.56ms DONE  
+
+---
