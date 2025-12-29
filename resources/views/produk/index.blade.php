@@ -14,28 +14,36 @@
         <div class="col-md-12">
             <div class="box">
                 <div class="box-header with-border">
-                    <button onclick="addForm('{{ route('produk.store') }}')" class="btn btn-success btn-xs btn-flat">
-                        <i class="fa fa-plus-circle"></i> Tambah
-                    </button>
+                    <div class="btn-group">
+                        <button onclick="addForm('{{ route('produk.store') }}')" class="btn btn-success btn-xs btn-flat">
+                            <i class="fa fa-plus-circle"></i> Tambah
+                        </button>
+                        <button onclick="deleteSelected('{{ route('produk.deleteSelected') }}')" class="btn btn-danger btn-xs btn-flat">
+                            <i class="fa fa-trash"></i> Hapus Terpilih
+                        </button>
+                    </div>
                 </div>
                 <div class="box-body table-responsive">
-                    <table class="table table-striped table-bordered">
-                        <thead>
-                            <th>
-                                <input type="checkbox" name="select_all" id="select_all">
-                            </th>
-                            <th width="5%">No</th>
-                            <th>Kode</th>
-                            <th>Nama</th>
-                            <th>Kategori</th>
-                            <th>Merk</th>
-                            <th>Harga Beli</th>
-                            <th>Harga Jual</th>
-                            <th>Diskon</th>
-                            <th>Stok</th>
-                            <th width="15%"><i class="fa fa-cog"></i></th>
-                        </thead>
-                    </table>
+                    <form action="" class="form-produk">
+                        @csrf
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <th>
+                                    <input type="checkbox" name="select_all" id="select_all">
+                                </th>
+                                <th width="5%">No</th>
+                                <th>Kode</th>
+                                <th>Nama</th>
+                                <th>Kategori</th>
+                                <th>Merk</th>
+                                <th>Harga Beli</th>
+                                <th>Harga Jual</th>
+                                <th>Diskon</th>
+                                <th>Stok</th>
+                                <th width="15%"><i class="fa fa-cog"></i></th>
+                            </thead>
+                        </table>
+                    </form>
                 </div>
             </div>
         </div>
@@ -147,6 +155,25 @@
                         alert('Tidak dapat menghapus data');
                         return;
                     });
+            }
+        }
+
+        // Fungsi untuk menghapus data terpilih
+        function deleteSelected(url) {
+            if ($('input:checked').length > 1) {
+                if (confirm('Yakin ingin menghapus data terpilih?')) {
+                    $.post(url, $('.form-produk').serialize())
+                        .done((response) => {
+                            table.ajax.reload();
+                        })
+                        .fail((errors) => {
+                            alert('Tidak dapat menghapus data');
+                            return;
+                        });
+                }
+            } else {
+                alert('Pilih data yang akan dihapus!');
+                return;
             }
         }
     </script>

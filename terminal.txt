@@ -428,3 +428,17 @@ $ php artisan migrate
   2025_12_27_052736_add_foreign_key_to_produk_table .............................................. 224.56ms DONE  
 
 ---
+LABSI@DESKTOP-EC8NA86 MSYS /c/laragon/www/lara-pos (main)
+$ php artisan route:list --name=produk
+
+  GET|HEAD        produk .......................................................... produk.index › ProdukController@index  
+  POST            produk .......................................................... produk.store › ProdukController@store  
+  GET|HEAD        produk/create ................................................. produk.create › ProdukController@create  
+  GET|HEAD        produk/data ....................................................... produk.data › ProdukController@data  
+  POST            produk/delete-selected ........................ produk.deleteSelected › ProdukController@deleteSelected  
+  GET|HEAD        produk/{produk} ................................................... produk.show › ProdukController@show  
+  PUT|PATCH       produk/{produk} ............................................... produk.update › ProdukController@update  
+  DELETE          produk/{produk} ............................................. produk.destroy › ProdukController@destroy  
+  GET|HEAD        produk/{produk}/edit .............................................. produk.edit › ProdukController@edit  
+
+ 
