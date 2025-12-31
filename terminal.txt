@@ -449,3 +449,17 @@ $ composer require milon/barcode
 
 LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
 $ composer require barryvdh/laravel-dompdf
+
+---
+
+===
+CRUD Member
+===
+LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:model Member -r
+
+   INFO  Model [C:\laragon\www\lara-pos\app\Models\Member.php] created successfully.
+
+   INFO  Controller [C:\laragon\www\lara-pos\app\Http\Controllers\MemberController.php] created successfully.
+
+---
