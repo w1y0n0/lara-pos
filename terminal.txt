@@ -463,3 +463,15 @@ $ php artisan make:model Member -r
    INFO  Controller [C:\laragon\www\lara-pos\app\Http\Controllers\MemberController.php] created successfully.
 
 ---
+
+===
+CRUD Supplier 
+===
+LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:model Supplier -c
+
+   INFO  Model [C:\laragon\www\lara-pos\app\Models\Supplier.php] created successfully.
+
+   INFO  Controller [C:\laragon\www\lara-pos\app\Http\Controllers\SupplierController.php] created successfully.
+
+---
