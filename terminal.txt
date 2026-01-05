@@ -487,3 +487,28 @@ $ php artisan make:model Pengeluaran -c
    INFO  Controller [C:\laragon\www\lara-pos\app\Http\Controllers\PengeluaranController.php] created successfully.      
 
 ---
+
+===
+Transaksi Pembelian 
+===
+LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:model Pembelian
+
+   INFO  Model [C:\laragon\www\lara-pos\app\Models\Pembelian.php] created successfully.
+
+LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:model PembelianDetail
+
+   INFO  Model [C:\laragon\www\lara-pos\app\Models\PembelianDetail.php] created successfully.
+
+LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:controller PembelianController
+
+   INFO  Controller [C:\laragon\www\lara-pos\app\Http\Controllers\PembelianController.php] created successfully.      
+
+LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:controller PembelianDetailController
+
+   INFO  Controller [C:\laragon\www\lara-pos\app\Http\Controllers\PembelianDetailController.php] created successfully.
+
+---
