@@ -14,7 +14,7 @@
             height: 54mm;
             border-radius: 8px;
             overflow: hidden;
-            background-image: url("{{ public_path('img/member.png') }}");
+            background-image: url("{{ public_path($setting->path_kartu_member) }}");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -104,8 +104,8 @@
                         <td class="text-center">
                             <div class="box">
                                 <div class="logo">
-                                    <p>{{ config('app.name') }}</p>
-                                    <img src="{{ public_path('img/icon_pnc.png') }}" alt="logo">
+                                    <p>{{ $setting->nama_perusahaan }}</p>
+                                    <img src="{{ public_path($setting->path_logo) }}" alt="logo">
                                 </div>
 
                                 <div class="nama">{{ $item->nama }}</div>

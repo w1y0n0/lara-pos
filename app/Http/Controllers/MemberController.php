@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Member;
+use App\Models\Setting;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 
@@ -32,9 +33,9 @@ class MemberController extends Controller
             ->addColumn('aksi', function ($member) {
                 return '
                 <div class="btn-group">
-                    <button type="button" onclick="editForm(`' . route('member.update', $member->id_member) . '`)" 
+                    <button type="button" onclick="editForm(`' . route('member.update', $member->id_member) . '`)"
                         class="btn btn-xs btn-info btn-flat"><i class="fa fa-pencil"></i></button>
-                    <button type="button" onclick="deleteData(`' . route('member.destroy', $member->id_member) . '`)" 
+                    <button type="button" onclick="deleteData(`' . route('member.destroy', $member->id_member) . '`)"
                         class="btn btn-xs btn-danger btn-flat"><i class="fa fa-trash"></i></button>
                 </div>
                 ';
@@ -118,9 +119,11 @@ class MemberController extends Controller
         }
 
         $datamember = $datamember->chunk(2);
+        
+        $setting = Setting::first();
 
         $no = 1;
-        $pdf = Pdf::loadView('member.cetak', compact('datamember', 'no'));
+        $pdf = Pdf::loadView('member.cetak', compact('datamember', 'no', 'setting'));
         $pdf->setPaper(array(0, 0, 566.93, 850.39), 'portrait');
         return $pdf->stream('member.pdf');
     }

@@ -114,16 +114,16 @@ Migrate + Seeder
 ----------------
 PS C:\laragon\www\lara-pos> php artisan migrate --seed
 
-   WARN  The database 'lara-pos' does not exist on the 'mysql' connection.  
+   WARN  The database 'lara-pos' does not exist on the 'mysql' connection.
 
   Would you like to create it? (yes/no) [yes]
 ❯ yes
 
-   INFO  Preparing database.  
+   INFO  Preparing database.
 
   Creating migration table ............................................................................................ 41.04ms DONE
 
-   INFO  Running migrations.  
+   INFO  Running migrations.
 
   0001_01_01_000000_create_users_table ............................................................................... 206.28ms DONE
   0001_01_01_000001_create_cache_table ................................................................................ 38.09ms DONE
@@ -135,16 +135,16 @@ PS C:\laragon\www\lara-pos> php artisan migrate --seed
   2025_12_24_061616_create_supplier_table ............................................................................. 20.70ms DONE
   2025_12_24_061903_create_pembelian_table ............................................................................ 35.38ms DONE
   2025_12_24_061926_create_pembelian_detail_table ..................................................................... 26.64ms DONE
-  2025_12_24_062002_create_penjualan_detail_table ..................................................................... 31.15ms DONE  
-  2025_12_24_062021_create_pengeluaran_table .......................................................................... 21.22ms DONE  
-  2025_12_24_062034_create_setting_table .............................................................................. 63.65ms DONE  
-  2025_12_25_081409_add_username_to_users_table ....................................................................... 98.68ms DONE  
+  2025_12_24_062002_create_penjualan_detail_table ..................................................................... 31.15ms DONE
+  2025_12_24_062021_create_pengeluaran_table .......................................................................... 21.22ms DONE
+  2025_12_24_062034_create_setting_table .............................................................................. 63.65ms DONE
+  2025_12_25_081409_add_username_to_users_table ....................................................................... 98.68ms DONE
 
 
    INFO  Seeding database.
 
-  Database\Seeders\UserTableSeeder ......................................................................................... RUNNING  
-  Database\Seeders\UserTableSeeder ..................................................................................... 995 ms DONE  
+  Database\Seeders\UserTableSeeder ......................................................................................... RUNNING
+  Database\Seeders\UserTableSeeder ..................................................................................... 995 ms DONE
 
 ---
 
@@ -278,7 +278,7 @@ $ php artisan migrate
 
    INFO  Running migrations.
 
-  2025_12_25_081409_add_username_to_users_table ................................................................. 1s DONE  
+  2025_12_25_081409_add_username_to_users_table ................................................................. 1s DONE
 
 LABSI@DESKTOP-EC8NA86 MINGW64 /d/laragon/www/lara-pos (main)
 $ php artisan make:seeder UserTableSeeder
@@ -303,7 +303,7 @@ $ php artisan make:controller AuthController
 ---
 
 ===
-CRUD Kategori 
+CRUD Kategori
 ===
 LABSI@DESKTOP-EC8NA86 MINGW64 /d/laragon/www/lara-pos (main)
 $ php artisan make:model Kategori
@@ -313,7 +313,7 @@ $ php artisan make:model Kategori
 LABSI@DESKTOP-EC8NA86 MINGW64 /d/laragon/www/lara-pos (main)
 $ php artisan make:controller KategoriController -r
 
-   INFO  Controller [D:\laragon\www\lara-pos\app\Http\Controllers\KategoriController.php] created successfully.     
+   INFO  Controller [D:\laragon\www\lara-pos\app\Http\Controllers\KategoriController.php] created successfully.
 
 LABSI@DESKTOP-EC8NA86 MINGW64 /d/laragon/www/lara-pos (main)
 $ composer require yajra/laravel-datatables-oracle:"^12.0"
@@ -333,15 +333,15 @@ Generating optimized autoload files
 > Illuminate\Foundation\ComposerScripts::postAutoloadDump
 > @php artisan package:discover --ansi
 
-   INFO  Discovering packages.  
+   INFO  Discovering packages.
 
   laravel/pail .................................................................................................... DONE
   laravel/sail .................................................................................................... DONE
   laravel/tinker .................................................................................................. DONE
   nesbot/carbon ................................................................................................... DONE
   nunomaduro/collision ............................................................................................ DONE
-  nunomaduro/termwind ............................................................................................. DONE  
-  yajra/laravel-datatables-oracle ................................................................................. DONE  
+  nunomaduro/termwind ............................................................................................. DONE
+  yajra/laravel-datatables-oracle ................................................................................. DONE
 
 82 packages you are using are looking for funding.
 Use the `composer fund` command to find out more!
@@ -354,31 +354,31 @@ No security vulnerability advisories found.
 LABSI@DESKTOP-EC8NA86 MINGW64 /d/laragon/www/lara-pos (main)
 $ php artisan route:list
 
-  GET|HEAD        / ....................................................................................................      
-  GET|HEAD        home ............................................................................................ home      
-  GET|HEAD        kategori ................................................... kategori.index › KategoriController@index      
-  POST            kategori ................................................... kategori.store › KategoriController@store      
-  GET|HEAD        kategori/create .......................................... kategori.create › KategoriController@create      
-  GET|HEAD        kategori/data ................................................ kategori.data › KategoriController@data      
-  GET|HEAD        kategori/{kategori} .......................................... kategori.show › KategoriController@show      
-  PUT|PATCH       kategori/{kategori} ...................................... kategori.update › KategoriController@update      
-  DELETE          kategori/{kategori} .................................... kategori.destroy › KategoriController@destroy      
-  GET|HEAD        kategori/{kategori}/edit ..................................... kategori.edit › KategoriController@edit      
-  GET|HEAD        login ................................................................... login › AuthController@index      
-  POST            login ............................................................ login.proses › AuthController@login      
-  GET|HEAD        logout ................................................................ logout › AuthController@logout      
-  GET|HEAD        storage/{path} ......................................................................... storage.local      
-  GET|HEAD        up ...................................................................................................      
+  GET|HEAD        / ....................................................................................................
+  GET|HEAD        home ............................................................................................ home
+  GET|HEAD        kategori ................................................... kategori.index › KategoriController@index
+  POST            kategori ................................................... kategori.store › KategoriController@store
+  GET|HEAD        kategori/create .......................................... kategori.create › KategoriController@create
+  GET|HEAD        kategori/data ................................................ kategori.data › KategoriController@data
+  GET|HEAD        kategori/{kategori} .......................................... kategori.show › KategoriController@show
+  PUT|PATCH       kategori/{kategori} ...................................... kategori.update › KategoriController@update
+  DELETE          kategori/{kategori} .................................... kategori.destroy › KategoriController@destroy
+  GET|HEAD        kategori/{kategori}/edit ..................................... kategori.edit › KategoriController@edit
+  GET|HEAD        login ................................................................... login › AuthController@index
+  POST            login ............................................................ login.proses › AuthController@login
+  GET|HEAD        logout ................................................................ logout › AuthController@logout
+  GET|HEAD        storage/{path} ......................................................................... storage.local
+  GET|HEAD        up ...................................................................................................
 
  ---
 
  ===
- CRUD Produk 
+ CRUD Produk
  ===
  LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
 $ php artisan make:migration add_foreign_key_to_produk_table
 
-   INFO  Migration [C:\laragon\www\lara-pos\database\migrations\2025_12_27_052736_add_foreign_key_to_produk_table.php] 
+   INFO  Migration [C:\laragon\www\lara-pos\database\migrations\2025_12_27_052736_add_foreign_key_to_produk_table.php]
 created successfully.
 
 LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
@@ -386,7 +386,7 @@ $ php artisan migrate
 
    INFO  Running migrations.
 
-  2025_12_27_052736_add_foreign_key_to_produk_table ................................................... 368.39ms DONE  
+  2025_12_27_052736_add_foreign_key_to_produk_table ................................................... 368.39ms DONE
 
 ---
 jika migrate gagal/error
@@ -425,21 +425,21 @@ $ php artisan migrate
 
    INFO  Running migrations.
 
-  2025_12_27_052736_add_foreign_key_to_produk_table .............................................. 224.56ms DONE  
+  2025_12_27_052736_add_foreign_key_to_produk_table .............................................. 224.56ms DONE
 
 ---
 LABSI@DESKTOP-EC8NA86 MSYS /c/laragon/www/lara-pos (main)
 $ php artisan route:list --name=produk
 
-  GET|HEAD        produk .......................................................... produk.index › ProdukController@index  
-  POST            produk .......................................................... produk.store › ProdukController@store  
-  GET|HEAD        produk/create ................................................. produk.create › ProdukController@create  
-  GET|HEAD        produk/data ....................................................... produk.data › ProdukController@data  
-  POST            produk/delete-selected ........................ produk.deleteSelected › ProdukController@deleteSelected  
-  GET|HEAD        produk/{produk} ................................................... produk.show › ProdukController@show  
-  PUT|PATCH       produk/{produk} ............................................... produk.update › ProdukController@update  
-  DELETE          produk/{produk} ............................................. produk.destroy › ProdukController@destroy  
-  GET|HEAD        produk/{produk}/edit .............................................. produk.edit › ProdukController@edit  
+  GET|HEAD        produk .......................................................... produk.index › ProdukController@index
+  POST            produk .......................................................... produk.store › ProdukController@store
+  GET|HEAD        produk/create ................................................. produk.create › ProdukController@create
+  GET|HEAD        produk/data ....................................................... produk.data › ProdukController@data
+  POST            produk/delete-selected ........................ produk.deleteSelected › ProdukController@deleteSelected
+  GET|HEAD        produk/{produk} ................................................... produk.show › ProdukController@show
+  PUT|PATCH       produk/{produk} ............................................... produk.update › ProdukController@update
+  DELETE          produk/{produk} ............................................. produk.destroy › ProdukController@destroy
+  GET|HEAD        produk/{produk}/edit .............................................. produk.edit › ProdukController@edit
 
 ---
 Cetak Barcode & PDF
@@ -465,7 +465,7 @@ $ php artisan make:model Member -r
 ---
 
 ===
-CRUD Supplier 
+CRUD Supplier
 ===
 LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
 $ php artisan make:model Supplier -c
@@ -477,19 +477,19 @@ $ php artisan make:model Supplier -c
 ---
 
 ===
-CRUD Pengeluaran 
+CRUD Pengeluaran
 ===
 LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
 $ php artisan make:model Pengeluaran -c
 
    INFO  Model [C:\laragon\www\lara-pos\app\Models\Pengeluaran.php] created successfully.
 
-   INFO  Controller [C:\laragon\www\lara-pos\app\Http\Controllers\PengeluaranController.php] created successfully.      
+   INFO  Controller [C:\laragon\www\lara-pos\app\Http\Controllers\PengeluaranController.php] created successfully.
 
 ---
 
 ===
-Transaksi Pembelian 
+Transaksi Pembelian
 ===
 LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
 $ php artisan make:model Pembelian
@@ -504,11 +504,54 @@ $ php artisan make:model PembelianDetail
 LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
 $ php artisan make:controller PembelianController
 
-   INFO  Controller [C:\laragon\www\lara-pos\app\Http\Controllers\PembelianController.php] created successfully.      
+   INFO  Controller [C:\laragon\www\lara-pos\app\Http\Controllers\PembelianController.php] created successfully.
 
 LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
 $ php artisan make:controller PembelianDetailController
 
    INFO  Controller [C:\laragon\www\lara-pos\app\Http\Controllers\PembelianDetailController.php] created successfully.
+
+---
+
+===
+Seeder Table Pengaturan
+===
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:seeder SettingTableSeeder
+
+   INFO  Seeder [C:\laragon\www\lara-pos\database\seeders\SettingTableSeeder.php] created successfully.
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:migration add_diskon_to_setting_table
+
+   INFO  Migration [C:\laragon\www\lara-pos\database\migrations\2026_01_08_031504_add_diskon_to_setting_table.php] created successfully.
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan migrate
+
+   INFO  Running migrations.
+
+  2026_01_08_031504_add_diskon_to_setting_table ....................................................................................... 52.59ms DONE
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan db:seed
+
+   INFO  Seeding database.
+
+  Database\Seeders\UserTableSeeder ......................................................................................................... RUNNING
+  Database\Seeders\UserTableSeeder ..................................................................................................... 439 ms DONE
+
+  Database\Seeders\SettingTableSeeder ...................................................................................................... RUNNING
+  Database\Seeders\SettingTableSeeder .................................................................................................... 1 ms DONE
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan db:seed --class=SettingTableSeeder
+
+   INFO  Seeding database.
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:model Setting
+
+   INFO  Model [C:\laragon\www\lara-pos\app\Models\Setting.php] created successfully.
 
 ---
