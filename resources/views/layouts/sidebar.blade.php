@@ -58,12 +58,12 @@
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <i class="fa fa-shopping-cart"></i> <span>Transaksi Lama</span>
+                <a href="{{ route('transaksi.index') }}">
+                    <i class="fa fa-shopping-cart"></i> <span>Transaksi Aktif</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="{{ route('transaksi.baru') }}">
                     <i class="fa fa-cart-plus"></i> <span>Transaksi Baru</span>
                 </a>
             </li>

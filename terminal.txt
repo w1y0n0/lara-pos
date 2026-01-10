@@ -555,3 +555,38 @@ $ php artisan make:model Setting
    INFO  Model [C:\laragon\www\lara-pos\app\Models\Setting.php] created successfully.
 
 ---
+
+===
+Transaksi Penjualan
+===
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:model Penjualan
+
+   INFO  Model [C:\laragon\www\lara-pos\app\Models\Penjualan.php] created successfully.
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:model PenjualanDetail
+
+   INFO  Model [C:\laragon\www\lara-pos\app\Models\PenjualanDetail.php] created successfully.
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:controller PenjualanController
+
+   INFO  Controller [C:\laragon\www\lara-pos\app\Http\Controllers\PenjualanController.php] created successfully.
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:controller PenjualanDetailController
+
+   INFO  Controller [C:\laragon\www\lara-pos\app\Http\Controllers\PenjualanDetailController.php] created successfully.
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:migration edit_id_member_to_penjualan_table
+
+   INFO  Migration [C:\laragon\www\lara-pos\database\migrations\2026_01_09_082638_edit_id_member_to_penjualan_table.php] created successfully.
+
+User@MYPCPROK7 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan migrate
+
+   INFO  Running migrations.
+
+  2026_01_09_082638_edit_id_member_to_penjualan_table ................................................................................. 55.77ms DONE
