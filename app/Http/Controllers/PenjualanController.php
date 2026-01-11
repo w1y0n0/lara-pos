@@ -12,7 +12,55 @@ class PenjualanController extends Controller
 {
     public function index()
     {
-        return 'OK';
+        return view('penjualan.index');
+    }
+
+    public function data()
+    {
+        $penjualan = Penjualan::orderBy('id_penjualan', 'desc')->get();
+
+        return datatables()
+            ->of($penjualan)
+            ->addIndexColumn()
+            ->addColumn('total_item', function ($penjualan) {
+                return format_uang($penjualan->total_item);
+            })
+            ->addColumn('total_harga', function ($penjualan) {
+                return 'Rp. '.format_uang($penjualan->total_harga);
+            })
+            ->addColumn('bayar', function ($penjualan) {
+                return 'Rp. '.format_uang($penjualan->bayar);
+            })
+            ->addColumn('tanggal', function ($penjualan) {
+                return tanggal_indonesia($penjualan->created_at, false);
+            })
+            ->addColumn('kode_member', function ($penjualan) {
+                return '<span class="label label-success">' . 
+                            ($penjualan->member->kode_member ?? '-') .
+                        '</span>';
+            })
+            ->addColumn('diskon', function ($penjualan) {
+                return $penjualan->diskon . ' %';
+            })
+            ->addColumn('kasir', function ($penjualan) {
+                return $penjualan->user->name ?? '-';
+            })
+            ->addColumn('aksi', function ($penjualan) {
+                return '
+                <div class="btn-group">
+                    <button onclick="showDetail(`'.route('penjualan.show', $penjualan->id_penjualan).'`)"
+                        class="btn btn-xs btn-info btn-flat">
+                        <i class="fa fa-eye"></i>
+                    </button>
+                    <button onclick="deleteData(`'.route('penjualan.destroy', $penjualan->id_penjualan).'`)"
+                        class="btn btn-xs btn-danger btn-flat">
+                        <i class="fa fa-trash"></i>
+                    </button>
+                </div>
+                ';
+            })
+            ->rawColumns(['kode_member', 'aksi'])
+            ->make(true);
     }
 
     public function create()
@@ -53,5 +101,46 @@ class PenjualanController extends Controller
         }
 
         return redirect()->route('penjualan.index');
+    }
+
+    public function show($id)
+    {
+        $detail = PenjualanDetail::where('id_penjualan', $id)->get();
+
+        return datatables()
+            ->of($detail)
+            ->addIndexColumn()
+            ->addColumn('kode_produk', function ($detail) {
+                return '<span class="label label-success">'.$detail->produk->kode_produk.'</span>';
+            })
+            ->addColumn('nama_produk', function ($detail) {
+                return $detail->produk->nama_produk;
+            })
+            ->addColumn('harga_jual', function ($detail) {
+                return 'Rp. '.format_uang($detail->harga_jual);
+            })
+            ->addColumn('jumlah', function ($detail) {
+                return format_uang($detail->jumlah);
+            })
+            ->addColumn('subtotal', function ($detail) {
+                return 'Rp. '.format_uang($detail->subtotal);
+            })
+            ->rawColumns(['kode_produk'])
+            ->make(true);
+    }
+
+    public function destroy($id)
+    {
+        $penjualan = Penjualan::findOrFail($id);
+        $detail = PenjualanDetail::where('id_penjualan', $penjualan->id_penjualan)->get();
+        foreach ($detail as $item) {
+            $produk = Produk::find($item->id_produk);
+            $produk->stok += $item->jumlah;
+            $produk->update();
+            $item->delete();
+        }
+        $penjualan->delete();
+
+        return response(null, 204);
     }
 }

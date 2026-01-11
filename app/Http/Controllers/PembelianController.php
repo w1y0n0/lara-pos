@@ -125,7 +125,14 @@ class PembelianController extends Controller
 
     public function destroy($id)
     {
-        $pembelian = Pembelian::find($id);
+        $pembelian = Pembelian::findOrFail($id);
+        $detail = PembelianDetail::where('id_pembelian', $pembelian->id_pembelian)->get();
+        foreach ($detail as $item) {
+            $produk = Produk::find($item->id_produk);
+            $produk->stok -= $item->jumlah;
+            $produk->update();
+            $item->delete();
+        }
         $pembelian->delete();
 
         return response(null, 204);
