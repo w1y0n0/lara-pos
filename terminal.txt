@@ -590,3 +590,15 @@ $ php artisan migrate
    INFO  Running migrations.
 
   2026_01_09_082638_edit_id_member_to_penjualan_table ................................................................................. 55.77ms DONE
+
+---
+
+===
+Laporan Pendapatan
+===
+LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:controller LaporanController
+
+   INFO  Controller [C:\laragon\www\lara-pos\app\Http\Controllers\LaporanController.php] created successfully.
+
+---
