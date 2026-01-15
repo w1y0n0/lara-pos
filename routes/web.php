@@ -82,11 +82,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/transaksi/nota-besar', [PenjualanController::class, 'notaBesar'])->name('transaksi.notaBesar');
 
     Route::get('/transaksi/{id}/data', [PenjualanDetailController::class, 'data'])->name('transaksi.data');
-    Route::get('/transaksi/loadform/{diskon}/{total}/{diterima}', [PenjualanDetailController::class, 'loadform'])->name('transaksi.loadform');
+    Route::get('/transaksi/loadform/{diskon}/{total}/{diterima}', [PenjualanDetailController::class, 'loadform'])
+        ->name('transaksi.loadform');
     Route::resource('/transaksi', PenjualanDetailController::class)
         ->except('show');
 
     // laporan
     Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan.index');
     Route::get('/laporan/data/{awal}/{akhir}', [LaporanController::class, 'data'])->name('laporan.data');
+    Route::get('/laporan/pdf/{awal}/{akhir}', [LaporanController::class, 'exportPDF'])->name('laporan.exportPDF');
 });
