@@ -48,4 +48,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    // Scope to filter non-admin users
+    public function scopeIsNotAdmin($query)
+    {
+        return $query->where('level', '!=', 1);
+    }
 }

@@ -602,3 +602,20 @@ $ php artisan make:controller LaporanController
    INFO  Controller [C:\laragon\www\lara-pos\app\Http\Controllers\LaporanController.php] created successfully.
 
 ---
+
+===
+Manajemen User
+===
+PS C:\laragon\www\lara-pos> php artisan route:list --name=user
+
+  GET|HEAD        user ......................................................... user.index › UserController@index
+  POST            user ......................................................... user.store › UserController@store
+  GET|HEAD        user/create ................................................ user.create › UserController@create
+  GET|HEAD        user/data ...................................................... user.data › UserController@data
+  GET|HEAD        user/{user} .................................................... user.show › UserController@show
+  PUT|PATCH       user/{user} ................................................ user.update › UserController@update
+  DELETE          user/{user} .............................................. user.destroy › UserController@destroy
+  GET|HEAD        user/{user}/edit ............................................... user.edit › UserController@edit
+
+                                                                                                Showing [8] routes
+---
