@@ -619,3 +619,21 @@ PS C:\laragon\www\lara-pos> php artisan route:list --name=user
 
                                                                                                 Showing [8] routes
 ---
+
+===
+Pengaturan (Setting) App
+===
+LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:controller SettingController
+
+   INFO  Controller [C:\laragon\www\lara-pos\app\Http\Controllers\SettingController.php] created successfully.
+
+PS C:\laragon\www\lara-pos> php artisan route:list --name=setting
+
+  GET|HEAD   setting ........................................................... setting.index › SettingController@index
+  POST       setting ......................................................... setting.update › SettingController@update
+  GET|HEAD   setting/first ....................................................... setting.show › SettingController@show
+
+                                                                                                      Showing [3] routes
+
+---
