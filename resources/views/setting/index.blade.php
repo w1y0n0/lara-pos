@@ -142,7 +142,16 @@
                     $('[name=alamat]').val(response.alamat);
                     $('[name=diskon]').val(response.diskon);
                     $('[name=tipe_nota]').val(response.tipe_nota);
+
                     $('title').text(response.nama_perusahaan + ' | Pengaturan');
+                    
+                    $('.logo-lg').text(response.nama_perusahaan);
+                    let words = response.nama_perusahaan.split(' ');
+                    let word = '';
+                    words.forEach(w => {
+                        word += w[0];
+                    });
+                    $('.logo-mini').html(`<b>${word}</b>`);
 
                     $('.tampil-logo').html(`<img src="{{ url('/') }}${response.path_logo}" width="200">`);
                     $('.tampil-kartu-member').html(

@@ -637,3 +637,14 @@ PS C:\laragon\www\lara-pos> php artisan route:list --name=setting
                                                                                                       Showing [3] routes
 
 ---
+
+===
+Profil
+===
+PS C:\laragon\www\lara-pos> php artisan route:list --path=profil 
+
+  GET|HEAD   profil ....................................................................... user.profil › UserController@profil  
+  POST       profil ........................................................... user.updateProfil › UserController@updateProfil  
+
+                                                                                                             Showing [2] routes  
+---
