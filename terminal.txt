@@ -648,3 +648,44 @@ PS C:\laragon\www\lara-pos> php artisan route:list --path=profil
 
                                                                                                              Showing [2] routes  
 ---
+
+===
+Git Checkout ke Commit Tertentu
+===
+LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
+$ git log --oneline
+2d37ea0 (HEAD -> main, origin/main, origin/HEAD) update profil & reset password
+79f7b9d pengaturan (setting) app
+8b87ac5 manajemen user
+20f08f3 laporan pendapatan | part-2 (export pdf)
+e520528 transaksi pembelian | part-2
+e649121 Merge pull request #2 from w1y0n0/main
+db4312c Merge pull request #1 from w1y0n0/main
+5898d03 crud pengeluaran
+9815422 crud supplier
+...
+
+LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
+$ git checkout -b layouts fd578b3
+Switched to a new branch 'layouts'
+
+LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (layouts)
+$ git branch
+* layouts
+  main
+
+LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (layouts)
+$ git log
+commit fd578b349e2af743070782530dc106cfd6624e63 (HEAD -> layouts)
+Author: aryawp0203 <labsi01pnc@gmail.com>
+Date:   Wed Dec 24 10:22:05 2025 +0700
+
+    add views/layouts
+
+commit 375313d7685ce8bdfc9da09587d3c4962932f176
+Author: aryawp0203 <labsi01pnc@gmail.com>
+Date:   Tue Dec 23 16:02:10 2025 +0700
+
+    init commit
+
+---
