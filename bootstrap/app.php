@@ -14,7 +14,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'auth' => \Illuminate\Auth\Middleware\Authenticate::class,
             'guest' => \Illuminate\Auth\Middleware\RedirectIfAuthenticated::class,
-            'cekuserlogin' => App\Http\Middleware\CekUserLogin::class,
+            'level' => App\Http\Middleware\CekUserLogin::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {

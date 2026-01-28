@@ -45,7 +45,7 @@
                                 <span class="help-block with-errors"></span>
                                 <br>
                                 <div class="tampil-foto">
-                                    <img src="{{ $profil->foto ? url($profil->foto) : url('images/user.png') }}"
+                                    <img src="{{ $profil->foto ? url($profil->foto) : url('img/user.png') }}"
                                         width="200">
                                 </div>
                             </div>

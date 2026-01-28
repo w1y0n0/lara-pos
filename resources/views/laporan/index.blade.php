@@ -7,8 +7,8 @@
 
 @push('css')
     <!-- bootstrap datepicker -->
-    <link rel="stylesheet" 
-        href="{{ asset('Dashboard/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('templates/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css') }}">
 @endpush
 
 @section('breadcrumb')
@@ -50,7 +50,7 @@
 
 @push('scripts')
     <!-- bootstrap datepicker -->
-    <script src="{{ asset('Dashboard/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
+    <script src="{{ asset('templates/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
     <script>
         let table;
 

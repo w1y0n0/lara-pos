@@ -71,7 +71,7 @@ class UserController extends Controller
         $user->username = $request->username;
 
         if ($request->has('password') && $request->password != "")
-            $user->password = $request->password;
+            $user->password = bcrypt($request->password);
         $user->update();
 
         return response()->json('Data berhasil disimpan', 200);

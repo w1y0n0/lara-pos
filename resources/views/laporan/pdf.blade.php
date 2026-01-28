@@ -7,8 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laporan Pendapatan</title>
 
-    <link rel="stylesheet" 
-        href="{{ public_path('Dashboard/bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ public_path('templates/bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
 </head>
 
 <body>

@@ -689,3 +689,13 @@ Date:   Tue Dec 23 16:02:10 2025 +0700
     init commit
 
 ---
+
+===
+Update Dashboard
+===
+LABSI@DESKTOP-EC8NA86 MINGW64 /c/laragon/www/lara-pos (main)
+$ php artisan make:controller DashboardController
+
+   INFO  Controller [C:\laragon\www\lara-pos\app\Http\Controllers\DashboardController.php] created successfully.     
+
+---
